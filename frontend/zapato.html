@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/57faba85b1.js" crossorigin="anonymous"></script>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        function myFunction1() {
+            var y = document.getElementById("buy");
+            if (y.className === "table") {
+              y.className += " responsives";
+            } else {
+              y.className = "table";
+            }
+          }
+          function myFunction2() {
+            var y = document.getElementById("buy");
+            if (y.className === "table") {
+              y.className += " responsives";
+            }
+          }
+          function myFunction3() {
+            var y = document.getElementById("buy");
+            if (y.className === "table") {
+              y.className += " responsives";
+            } else {
+              y.className = "table";
+            }
+          }
+          
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            
+            <a href="javascript:void(0);" class="icon1" onclick="myFunction1()">
+                <i class="fa-solid fa-cart-shopping"></i>   
+            </a>
+          
+        
+            <a href="login.html">DISFRACEZ</a>
+            <a href="pijamas.html">PIJAMAS</a>
+            <a href="polos.html" class="active">POLOS</a>
+            <a href="poleras.html">POLERAS</a>
+            <a href="pantalon.html">PANTALONES</a>
+            <a href="index.html">CALZADO</a>
+
+            <img src="logo.png" width="150px" height="75%">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+                
+        
+        </div>
+
+
+
+        
+    </header>
+    <div class="container">
+        <h1>galeria</h1>
+        <hr>
+        
+        <div class="row" id="cards"></div>
+    </div>
+          
+    
+    
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+            <button class="btn btn-success btn-sm " id="pagar-carrito">
+              pagar
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+    
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+            <img src="" alt="" class="card-img-top" height="400" width="400">
+            <div class="card-body">
+              <h5>Titulo</h5>
+              <span>Talla</span>
+              <custom-talla>Talla</custom-talla><br>
+              <span>Color</span>
+              <custom-color>Color</custom-color><br>
+              <span>Marca</span>
+              <custom-marca>marca</custom-marca><br>
+              <span>precio</span>
+              <p>precio</p>
+              <button class="btn btn-dark">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </template>
+    <footer>
+      <div class="divcontent">
+        <table class="table" id="buy">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+              <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              </tr>
+            </tfoot>
+          </table>
+    
+    
+    </div>
+    </footer>
+    <script src="zapato.js"></script>
+</body>
+</html>
